@@ -1,0 +1,66 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Analyzing Current Twitter Topics with Watson NLU Demo</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+    <!-- CSS concatenated and minified via ant build script-->
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- end CSS-->
+
+    <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+
+  <div class="well">
+    <header>
+        <h2>Analyzing Current Twitter Topics with Watson NLU Demo</h2>
+    </header>
+    <h4> Enter a phrase below such as 'IBM' or 'Trump' to get current concepts, keywords, and sentiment related to the phrase through recent related tweets <br> </h4>
+    <form id="upload-form" method="POST" enctype="multipart/form-data" action="/fileUpload">
+        <table>
+            <tr>
+            <input type="text" id="text" name="text"/>
+          </t></t><td><input type="submit" value="Update Tweets" /><h7>       (***may take a few seconds***)</h7></td>
+            </tr>
+
+        </table>
+    </form>
+    <h5> To view the tweets used in this analysis, navigate to nlu_twitter/tweets.txt. <br> </h5>
+  </div>
+
+
+<div id="container" class="container">
+    <ul class="nav nav-tabs">
+      <li id="conceptsLi" class="active"><a href="#" id="conceptsTab">Concepts</a></li>
+      <li id="keywordsLi"><a href="#" id="keywordsTab">Keywords</a></li>
+      <li id="sentimentsLi"><a href="#" id="sentimentsTab">Sentiments</a></li>
+    </ul>
+    <div id="main" role="main">
+        <div id="vis">
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+    <p><a href="https://github.com/vlandham/bubble_cloud">Twitter IBM - Github</a> | <a href="https://www.ibm.com/watson/services/natural-language-understanding/">Watson NLU</a></p>
+</footer>
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+
+<script defer src="js/plugins.js"></script>
+<script src="js/libs/d3.min.js"></script>
+<script src="js/viz.js"></script>
+</body>
+</html>
